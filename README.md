@@ -44,7 +44,7 @@ ex.
 
 |selected|labeled|unlabeled|
 |:--:|:--:|:--:|
-|:-<img src="static/sc1.png" width=250/>-:|:-<img src="static/sc2.png" width=250/>-:|:-<img src="static/sc3.png" width=250/>-:|
+|<img src="static/sc1.png" width=250/>|<img src="static/sc2.png" width=250/>|<img src="static/sc3.png" width=250/>|
 
 ## Add extra space between icon and text
 
