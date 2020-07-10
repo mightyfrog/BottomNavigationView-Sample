@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- adjust BottomNavigationView text size -->
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+
+    <!-- override BottomNavigationView height to add extra space between icon and text -->
+    <dimen name="design_bottom_navigation_height" tools:override="true">60dp</dimen>
+</resources>
