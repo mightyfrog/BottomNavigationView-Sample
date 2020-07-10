@@ -1,6 +1,6 @@
 # BottomNavigationView Sample
 
-## How to change text size
+## Change text size
 
 Override these two dimen attributes:
 
@@ -14,7 +14,7 @@ ex.
 <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
 ```
 
-## How to change icon size
+## Change icon size
 
 Set **app:itemIconSize** in the BottomNavigationView tag.
 
@@ -28,7 +28,7 @@ ex.
     ... />
 ```
 
-## How to display icons and texts at all time
+## Display icons and texts at all time
 
 Set **app:labelVisibilityMode="labeled"** in the BottomNavigationView tag.
 
