@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import org.mightyfrog.android.bottomnavigationviewsample.R
 
 class ListFragment : Fragment() {
@@ -19,8 +19,7 @@ class ListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        listViewModel =
-            ViewModelProviders.of(this).get(ListViewModel::class.java)
+        listViewModel = ViewModelProvider(this).get(ListViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_list, container, false)
         val textView: TextView = root.findViewById(R.id.text_list)
         listViewModel.text.observe(viewLifecycleOwner, Observer {
