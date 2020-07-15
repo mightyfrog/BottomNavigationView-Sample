@@ -55,3 +55,17 @@ ex.
 ```xml
 <dimen name="design_bottom_navigation_height" tools:override="true">60dp</dimen>
 ```
+
+## Change the back button behavior
+
+Remove **app:defaultNavHost="true"** or set it to false so the back button doesn't defaults to the start destination (app:startDestination="@+id/navigation_home" in mobile_navigation.xml).
+
+ex.
+
+```xml
+<fragment
+    ...
+    app:defaultNavHost="true"
+    ...
+    ... />
+```
