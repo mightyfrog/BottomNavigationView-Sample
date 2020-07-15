@@ -1,5 +1,42 @@
 # BottomNavigationView Sample
 
+## IDs
+
+The item id in menu.xml and its corresponding fragment's id in navigation.xml must be the same.
+
+ex. (@+id/navigation_home)
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    ...
+</menu>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="org.mightyfrog.android.bottomnavigationviewsample.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    ...
+</navigation>
+```
+
 ## Change text size
 
 Override these two dimen attributes:
