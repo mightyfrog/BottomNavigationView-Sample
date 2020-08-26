@@ -27,7 +27,7 @@ ex. (@+id/navigation_home)
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/navigation_home"
         android:name="org.mightyfrog.android.bottomnavigationviewsample.ui.home.HomeFragment"
         android:label="@string/title_home"
