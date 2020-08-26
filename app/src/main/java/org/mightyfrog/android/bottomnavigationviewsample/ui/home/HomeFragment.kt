@@ -1,29 +1,45 @@
 package org.mightyfrog.android.bottomnavigationviewsample.ui.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import org.mightyfrog.android.bottomnavigationviewsample.R
+import org.mightyfrog.android.bottomnavigationviewsample.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
     private val homeViewModel: HomeViewModel by viewModels()
+
+    init {
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
+        val binding = FragmentHomeBinding.inflate(inflater)
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+            binding.textHome.text = it
         })
-        return root
+        return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.home_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Toast.makeText(
+            context,
+            getString(R.string.menu_tapped, item.title),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        return super.onOptionsItemSelected(item)
     }
 }

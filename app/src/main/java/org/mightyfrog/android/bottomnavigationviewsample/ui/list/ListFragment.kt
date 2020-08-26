@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import org.mightyfrog.android.bottomnavigationviewsample.R
+import org.mightyfrog.android.bottomnavigationviewsample.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
 
@@ -19,11 +18,10 @@ class ListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_list, container, false)
-        val textView: TextView = root.findViewById(R.id.text_list)
+        val binding = FragmentListBinding.inflate(inflater)
         listViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+            binding.textList.text = it
         })
-        return root
+        return binding.root
     }
 }
