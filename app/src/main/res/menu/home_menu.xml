@@ -14,9 +14,4 @@
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
         android:title="Item 2"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/home_menu_item3"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Item 3"
-        app:showAsAction="ifRoom" />
 </menu>
