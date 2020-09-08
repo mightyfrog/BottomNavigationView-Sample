@@ -109,7 +109,7 @@ ex.
 
 ## Menu handling
 
-Each fragment can have its own menu by inflating a menu.xml and toolbar updating is automatically handled on tab switch. The menu inflated in the host activity will be available in all the fragments.
+Each fragment can have its own menu just by inflating a menu.xml in *onCreateOptionsMenu* and the system updates the toolbar accordingly on tab switch. The menu inflated in the host activity will be available in all the fragments.
 
 ```kotlin
 init {
