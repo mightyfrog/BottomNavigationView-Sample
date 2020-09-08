@@ -116,3 +116,7 @@ init {
     setHasOptionsMenu(true) // DON't FORGET ME!
 }
 ```
+
+## Keep fragment states
+
+See [Android Architecture Components Advanced Navigation Sample](https://github.com/android/architecture-components-samples/tree/master/NavigationAdvancedSample)
