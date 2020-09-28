@@ -2,7 +2,11 @@
 
 ## IDs
 
-The item id in menu.xml and its corresponding fragment's id in navigation.xml must be the same.
+The item id in menu.xml and its corresponding fragment's id in navigation.xml must be the same, otherwise you'll get NullPointerException.
+
+```shell
+java.lang.NullPointerException: null cannot be cast to non-null type androidx.navigation.fragment.NavHostFragment
+```
 
 ex. (@+id/navigation_home)
 
